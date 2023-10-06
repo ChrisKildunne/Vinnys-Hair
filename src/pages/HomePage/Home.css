@@ -1,0 +1,38 @@
+@keyframes paint {
+    from {
+        clip-path: inset(0 100% 0 0); /* right side is at 100%, effectively hiding the element */
+        margin-top: 30px;
+    }
+    to {
+        clip-path: inset(0 0% 0 0);  /* right side is at 0%, showing the entire element */
+        margin-top: 30px;
+    }
+}
+
+h1 {
+    font-family: 'Pacifico', cursive; /* Here I used 'Pacifico' as an example, but you can use any cursive font */
+    position: relative;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap; /* This will keep the text in a single line while animating */
+    animation: paint 3s forwards;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+    filter: hue-rotate(210deg);
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 7px 7px 20px rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+
+
