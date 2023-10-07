@@ -8,5 +8,5 @@ export function getBooking(){
 }
 
 export function createBooking(bookingData) {
-    return sendRequest(`${BASE_URL}/create`, 'POST', bookingData);
+    return sendRequest(`${BASE_URL}`, 'POST', bookingData);
 }
