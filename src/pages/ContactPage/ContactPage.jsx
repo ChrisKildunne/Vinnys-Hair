@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import * as bookingsAPI from '../../utilities/bookings-api';  // Consider renaming if you create a separate API module
+// import * as bookingsAPI from '../../utilities/bookings-api';  // Consider renaming if you create a separate API module
 
 export default function CPage() {
     const [formData, setFormData] = useState({
@@ -11,7 +11,7 @@ export default function CPage() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const result = await bookingsAPI.createBooking(formData);
+        // const result = await bookingsAPI.createBooking(formData);
     };
 
     return (
