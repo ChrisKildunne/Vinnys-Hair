@@ -8,8 +8,9 @@ import ProductDetailsPage from '../ProductDetailsPage/ProductDetailsPage';
 import CartPage from '../CartPage/CartPage';
 import NavBar from '../../components/NavBar/NavBar';
 import CheckoutForm from '../../components/CheckoutForm/CheckoutForm';
-import HomePage from '../HomePage/HomePage';  // Assuming you have a HomePage component
-import ContactPage from '../ContactPage/ContactPage';  // Assuming you have a ContactPage component
+import HomePage from '../HomePage/HomePage';  
+import ContactPage from '../ContactPage/ContactPage';  
+import MyWork from '../MyWork/MyWork';  
 import { getUser } from '../../utilities/users-service';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
@@ -32,9 +33,10 @@ export default function App() {
       <NavBar user={user} setUser={setUser} />
 
       <Routes>
-        <Route path="/" element={<HomePage />} />  // Added HomePage route
+        <Route path="/" element={<HomePage />} />  
+        <Route path="/mywork" element={<MyWork/>} />  
         <Route path="/orders/new" element={<ProductsPage user={user} />} />
-        <Route path="/contact" element={<ContactPage />} />  // Removed the user prop from ContactPage, assuming it's not necessary
+        <Route path="/contact" element={<ContactPage />} />  
         <Route path="/product/:productId" element={<ProductDetailsPage user={user} />} />
         <Route path="/orders/cart" element={<CartPage user={user} />} />
         <Route path="/orders/checkout" element={<Elements stripe={stripePromise}><CheckoutForm user={user} /></Elements>} />

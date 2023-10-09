@@ -30,11 +30,11 @@ export default function CheckoutForm({ user }){
     
     useEffect(() => {
         async function getTotalPrice() {
-          const total = await ordersAPI.getTotal(user._id);
+          const total = await ordersAPI.getTotal();
           setTotalPrice(total);
         }
         getTotalPrice();
-      }, [user]);
+      }, []);
     
 
     const handleSubmit = async (event) => {
@@ -44,7 +44,7 @@ export default function CheckoutForm({ user }){
         }
         
         try {
-            const response = await ordersAPI.createPaymentIntent(user._id);
+            const response = await ordersAPI.createPaymentIntent();
             const { clientSecret } = await response.json();
             
             const result = await stripe.confirmCardPayment(clientSecret, {
