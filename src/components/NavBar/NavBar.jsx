@@ -5,7 +5,7 @@ import './NavBar.css';
 
 export default function NavBar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav className="navbar navbar-expand-lg">
             <div className="collapse navbar-collapse">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item">

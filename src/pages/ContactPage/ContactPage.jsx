@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import * as bookingsAPI from '../../utilities/bookings-api';  // Consider renaming if you create a separate API module
+import * as bookingsAPI from '../../utilities/bookings-api';
+import './ContactPage.css'
 
 export default function ContactPage() {
     const [booking, setBooking] = useState({
@@ -7,50 +8,54 @@ export default function ContactPage() {
         date: '',
         description: ''
     });
-    const [submit, setSubmit] = useState(false)
+    const [submit, setSubmit] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('data', booking)
+        console.log('data', booking);
         const result = await bookingsAPI.createBooking(booking);
         setBooking({
             name: '',
             date: '',
             description: '',
-        })
-        setSubmit(true)
+        });
+        setSubmit(true);
     };
 
     return (
-        <div>
+        <div className="container mt-5">
             <h1>Bookings</h1>
-            {submit &&<p>Booking recieved</p>}
+            {submit && <p>Booking received</p>}
             <form onSubmit={handleSubmit}>
-                <label>
-                    Name:
+                <div className="mb-3">
+                    <label className="form-label">Name:</label>
                     <input 
                         type="text" 
                         value={booking.name}
                         onChange={(e) => setBooking({ ...booking, name: e.target.value })}
+                        className="form-control"
                     />
-                </label>
-                <label>
-                    Date:
+                </div>
+                <div className="mb-3">
+                    <label className="form-label">Date:</label>
                     <input 
-                        type="date"
+                        type="datetime-local"
                         value={booking.date}
                         onChange={(e) => setBooking({ ...booking, date: e.target.value })}
+                        className="form-control"
                     />
-                </label>
-                <label>
-                    Description:
-                    <input 
-                        type="text" 
+                </div>
+                <div className="mb-3">
+                    <label className="form-label">Description:</label>
+                    <textarea 
                         value={booking.description}
                         onChange={(e) => setBooking({ ...booking, description: e.target.value })}
+                        className="form-control"
                     />
-                </label>
-                <button type="submit">Submit Booking</button>
+                </div>
+                <div className='container mt-5'>
+                    <button type="submit" className="btn custom-btn">Submit Booking</button>
+                </div>
             </form>
         </div>
     );

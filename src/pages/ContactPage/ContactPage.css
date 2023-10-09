@@ -1,0 +1,30 @@
+
+.custom-btn {
+    color: black !important;
+    background-color: transparent !important;
+    transition: background-color 0.3s ease, color 0.3s ease !important;
+    width: 500px !important;
+    font-size: 20px !important;
+}
+
+.custom-btn:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+.custom-btn:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    border: 1px solid black !important;
+}
+
+
+.form-control {
+    background-color: transparent !important; 
+    color: black !important; 
+    border: 1px solid black !important; 
+}
+
+.form-control::placeholder {
+    color: black !important;
+}
