@@ -6,7 +6,7 @@ export default function NavBar() {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <Link className="navbar-brand" to="/">Home</Link>
             &nbsp; | &nbsp;
-            <Link className="navbar-brand" to="/orders/new">Products Page</Link>
+            <Link className="navbar-brand" to="/orders/new">Merch</Link>
             &nbsp; | &nbsp;
             <Link className="navbar-brand" to="/contact">Contact</Link>
             &nbsp; | &nbsp;

@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const cookieParser = require('cookie-parser')
+const { v4: uuidv4 } = require('uuid');
 
 require('dotenv').config();
 
@@ -9,12 +11,19 @@ require('./config/database');
 
 
 const app = express();
+app.use(cookieParser());
 
 const stripe = require('stripe')(process.env.SECRET_KEY)
    
 app.use(logger('dev'));
 app.use(express.json());
 
+app.use((req, res, next) => {
+    if (!req.cookies.cartId) {
+        res.cookie('cartId', uuidv4(), { maxAge: 24 * 60 * 60 * 1000 }); // 1 day expiration for example
+    }
+    next();
+});
 	
  // Configure both serve-favicon & static middleware
  // to serve from the production 'build' folder

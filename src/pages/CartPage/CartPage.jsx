@@ -14,10 +14,9 @@ export default function CartPage({ user }) {
       setCart(cartData);
     }
 
-    if (user) {
       getCart();
-    }
-  }, [user]);
+    
+  },[]);
 
   /*---- Event Handlers ----*/
   async function handleChangeQty(productId, newQty) {

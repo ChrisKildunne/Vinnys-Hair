@@ -12,12 +12,15 @@ const lineItemSchema = new Schema ({
 })
 
 lineItemSchema.virtual('extPrice').get(function () {
+    if (!this.product) return 0;  // return 0 or some default value if product is null
+    console.log(this.product)
     return this.qty * this.product.price;
-})
+});
+
 
 
 const orderSchema = new Schema({
-    user: { type: Schema.Types.ObjectId, ref: 'User', required: true},
+    cartId: {type: String, required: true},
     lineItems: [lineItemSchema],
     isPaid: { type: Boolean, default: false},
 
@@ -38,6 +41,7 @@ orderSchema.virtual('orderId').get(function () {
 })
 
 orderSchema.methods.addItemToCart = async function(productId){
+    console.log(productId)
     const existingProduct = this.lineItems.find((product) => product.product._id.equals(productId));
     if(existingProduct){
         existingProduct.qty += 1;
@@ -66,10 +70,10 @@ orderSchema.methods.setProductQty = function (productId, newQty) {
   };
   
 
-orderSchema.statics.getCart = function(userId) {
+orderSchema.statics.getCart = function(cartId) {
     return this.findOneAndUpdate(
-        { user: userId, isPaid: false },
-        { user : userId },
+        { cartId: cartId, isPaid: false },
+        {},
         { upsert: true, new: true}
     );
 };

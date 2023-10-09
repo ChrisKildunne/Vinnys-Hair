@@ -3,27 +3,27 @@ import sendRequest from "./send-request";
 const BASE_URL = '/api/orders';
 
 export function getCart(){
-    return sendRequest(`${BASE_URL}/cart`)
+    return sendRequest(`${BASE_URL}/cart`);
 }
 
 export function addProductToCart(productId){
-    return sendRequest(`${BASE_URL}/cart/products/${productId}`, 'POST')
+    return sendRequest(`${BASE_URL}/cart/products/${productId}`, 'POST');
 }
 
-
 export function setProductQtyInCart(productId, newQty) {
-    return sendRequest(`${BASE_URL}/cart/qty`, 'PUT', { productId, newQty})
+    return sendRequest(`${BASE_URL}/cart/qty`, 'PUT', { productId, newQty });
 }
 
 export function checkout() {
     return sendRequest(`${BASE_URL}/cart/checkout`, 'POST'); 
-  }
-  
-  export function allPastOrders(userId){
-    return sendRequest(`${BASE_URL}/user/${userId}/orders`, 'GET')
 }
-export function createPaymentIntent(userId) {
-    return fetch(`${BASE_URL}/createPaymentIntent/${userId}`, {
+  
+export function allPastOrders(){
+    return sendRequest(`${BASE_URL}/orders`, 'GET');
+}
+
+export function createPaymentIntent() {
+    return fetch(`${BASE_URL}/createPaymentIntent`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -35,8 +35,8 @@ export function createPaymentIntent(userId) {
       }
       return response;
     });
-  }
+}
 
-  export function getTotal(userId){
-    return sendRequest(`${BASE_URL}/user/${userId}/total-price`, 'GET')
+export function getTotal(){
+    return sendRequest(`${BASE_URL}/total-price`, 'GET');
 }

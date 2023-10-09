@@ -17,14 +17,12 @@ export default function ProductListItem({ productItem, isPaid,handleAddToCart, u
         </div>
       </Link>
       <div className="product-card-footer">
-        {user && (
             <button
             className="btn btn-primary btn-lg"
             onClick={() => handleAddToCart(productItem._id)}
             >
             Add To Cart
           </button>
-        )}
       </div>
     </div>
 </div>
