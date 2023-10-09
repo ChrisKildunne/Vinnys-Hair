@@ -8,7 +8,6 @@ import ProductDetailsPage from '../ProductDetailsPage/ProductDetailsPage';
 import CartPage from '../CartPage/CartPage';
 import NavBar from '../../components/NavBar/NavBar';
 import CheckoutForm from '../../components/CheckoutForm/CheckoutForm';
-import SearchBar from "../../components/SearchBar/SearchBar";
 import HomePage from '../HomePage/HomePage';  // Assuming you have a HomePage component
 import ContactPage from '../ContactPage/ContactPage';  // Assuming you have a ContactPage component
 import { getUser } from '../../utilities/users-service';
@@ -25,13 +24,13 @@ export default function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate('/orders/new'); 
+    navigate('/'); 
   }, []);
 
   return (
     <main className="App">
       <NavBar user={user} setUser={setUser} />
-      <SearchBar/>
+
       <Routes>
         <Route path="/" element={<HomePage />} />  // Added HomePage route
         <Route path="/orders/new" element={<ProductsPage user={user} />} />

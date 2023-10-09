@@ -1,16 +1,34 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import './NavBar.css';
 
 export default function NavBar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <Link className="navbar-brand" to="/">Home</Link>
-            &nbsp; | &nbsp;
-            <Link className="navbar-brand" to="/orders/new">Merch</Link>
-            &nbsp; | &nbsp;
-            <Link className="navbar-brand" to="/contact">Contact</Link>
-            &nbsp; | &nbsp;
-            <Link className="navbar-brand" to="/orders/cart">Your Cart</Link>
+            <div className="collapse navbar-collapse">
+                <ul className="navbar-nav mr-auto">
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/">Home</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/orders/new">Merch</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/contact">Contact</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/orders/cart">Your Cart</Link>
+                    </li>
+                </ul>
+                <ul className="navbar-nav">
+                    <li className="nav-item">
+                        <a href="https://www.instagram.com/your_instagram_username/" target="_blank" rel="noopener noreferrer" >
+                            <FontAwesomeIcon icon={faInstagram} size="2x" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     );
 }
