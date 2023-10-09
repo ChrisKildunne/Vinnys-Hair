@@ -28,9 +28,17 @@ async function create(req, res) {
 
 let transporter = nodemailer.createTransport({
     service: 'gmail',
+    port: 465,
+    logger: true,
+    debug: true,
+    secure: true,
+    secureConnection: false,
     auth: {
         user: 'chriskildunnese@gmail.com',
-        pass: 'hello'  
+        pass: 'nsrt czwj mjym xabd'  
+    },
+    tls: {
+        rejectUnauthorized: true
     }
 });
 
