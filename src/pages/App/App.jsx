@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import ProductsPage from '../ProductsPage/ProductsPage';
-// Remove the OrderHistoryPage import
-// import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import ProductDetailsPage from '../ProductDetailsPage/ProductDetailsPage';
 import CartPage from '../CartPage/CartPage';
 import NavBar from '../../components/NavBar/NavBar';
@@ -14,7 +12,7 @@ import { getUser } from '../../utilities/users-service';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "../../index.css";
 import "./App.css";
 
