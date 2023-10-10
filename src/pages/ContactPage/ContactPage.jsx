@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import * as bookingsAPI from '../../utilities/bookings-api';
 import './ContactPage.css'
 
@@ -25,7 +25,6 @@ export default function ContactPage() {
             setErrorMsg('Please fill out all fields')
             return
         }
-        console.log('data', booking);
         const result = await bookingsAPI.createBooking(booking);
         setBooking({
             name: '',

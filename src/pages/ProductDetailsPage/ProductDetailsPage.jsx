@@ -1,6 +1,5 @@
 import {  useEffect, useState } from 'react';
 import { useParams } from "react-router-dom"
-import ReviewForm from '../../components/ReviewForm/ReviewForm'
 import * as productsAPI from '../../utilities/products-api';
 
 export default function ProductDetailsPage({user, handleAddToCart}) {
@@ -27,7 +26,6 @@ export default function ProductDetailsPage({user, handleAddToCart}) {
       ) : (
         <h1>Error</h1>
       )}
-      <ReviewForm productId={productId} user={user} />
     </div>
   );
 }
