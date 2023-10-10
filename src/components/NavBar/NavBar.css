@@ -1,9 +1,4 @@
-.NavBar {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white; 
-    min-height: 100vh; 
-  
-  }
+
 
   .nav-item{
     padding-left: 20px;
@@ -15,4 +10,15 @@
     font-weight: bold;  
     transform: translateY(-3px);
     transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .nav-item {
+    padding-left: 10px; 
+  }
+}
+@media (max-width: 768px) {
+  .nav-link {
+    padding: 10px 5px; 
+  }
 }

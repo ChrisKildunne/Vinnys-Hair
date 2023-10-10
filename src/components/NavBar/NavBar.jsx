@@ -5,8 +5,11 @@ import './NavBar.css';
 
 export default function NavBar() {
     return (
-<nav className="navbar navbar-expand-lg">
-            <div className="collapse navbar-collapse">
+        <nav className="navbar navbar-expand-lg ">
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
                         <Link className="nav-link" to="/">Home</Link>
@@ -15,13 +18,7 @@ export default function NavBar() {
                         <Link className="nav-link" to="/mywork">My Work</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/orders/new">Merch</Link>
-                    </li>
-                    <li className="nav-item">
                         <Link className="nav-link" to="/contact">Contact</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/orders/cart">Your Cart</Link>
                     </li>
                 </ul>
                 <ul className="navbar-nav">

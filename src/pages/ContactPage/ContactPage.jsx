@@ -39,7 +39,8 @@ export default function ContactPage() {
     return (
         <div className="container mt-5">
             <h1>Bookings</h1>
-            {submit && <p  className='success-msg'>Your booking was receieved. Vinny will reach out to you as soon as possible to discuss the details!</p>}
+            {!submit && <p  className='success-msg'>Please enter your name, desired date of appointment, phone number and a short description of what you'd like.</p>}
+            {submit && <p  className='success-msg'>Your booking was receieved. You will recieve a confirmation text shortly and Vinny will reach out to you as soon as possible to discuss the details!</p>}
             {errorMsg && <div className="alert alert-danger">{errorMsg}</div>}
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -52,6 +53,7 @@ export default function ContactPage() {
                             setErrorMsg(null);
                         }}
                         className="form-control"
+                        disabled={submit}
                     />
                 </div>
                 <div className="mb-3">
@@ -64,6 +66,7 @@ export default function ContactPage() {
                             setErrorMsg(null);
                         }}                        
                         className="form-control"
+                        disabled={submit}
                     />
                 </div>
                 <div className="mb-3">
@@ -76,6 +79,7 @@ export default function ContactPage() {
                             setErrorMsg(null);
                         }}                       
                          className="form-control"
+                         disabled={submit}
                     />
                 </div>
                 <div className="mb-3">
@@ -87,6 +91,7 @@ export default function ContactPage() {
                             setErrorMsg(null);
                         }}                       
                          className="form-control"
+                         disabled={submit}
                     />
                 </div>
                 <div className='container mt-5'>

@@ -32,7 +32,18 @@ img:hover {
 }
 
 
-
+@media (max-width: 768px) {
+    img {
+      max-width: 90%; /* takes up more screen space on mobile */
+    }
+  }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 24px; /* adjust as needed */
+    }
+  }
+  
+  
 
 
 

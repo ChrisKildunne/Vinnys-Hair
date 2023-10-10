@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import AuthPage from '../AuthPage/AuthPage';
 import ProductsPage from '../ProductsPage/ProductsPage';
 // Remove the OrderHistoryPage import
 // import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
