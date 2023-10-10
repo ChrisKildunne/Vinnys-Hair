@@ -26,7 +26,7 @@ export default function NavBar() {
                 </ul>
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <a href="https://www.instagram.com/your_instagram_username/" target="_blank" rel="noopener noreferrer" >
+                        <a href="https://www.instagram.com/yourhairsuks/" target="_blank" rel="noopener noreferrer" >
                             <FontAwesomeIcon icon={faInstagram} size="2x" />
                         </a>
                     </li>

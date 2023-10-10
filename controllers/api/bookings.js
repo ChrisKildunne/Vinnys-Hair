@@ -14,7 +14,7 @@ async function create(req, res) {
         from: 'chriskildunnese@gmail.com',
         to: 'chriskildunne@gmail.com',
         subject: 'New Booking Recieved',
-        text: `Name: ${booking.name}, Date: ${booking.date}, Description: ${booking.description}`
+        text: `Name: ${booking.name}, Client Phone: ${booking.phone} Date: ${booking.date}, Description: ${booking.description}`
     };
 
     try {

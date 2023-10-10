@@ -5,17 +5,31 @@ import './ContactPage.css'
 export default function ContactPage() {
     const [booking, setBooking] = useState({
         name: '',
+        phone: '',
         date: '',
         description: ''
     });
     const [submit, setSubmit] = useState(false);
+    const [errorMsg, setErrorMsg] = useState(null)
 
+    const isValidForm = () => {
+        if(!booking.name || !booking.phone || !booking.date || !booking.description){
+            return false;
+        }
+        return true;
+    }
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!isValidForm()){
+            setErrorMsg('Please fill out all fields')
+            return
+        }
         console.log('data', booking);
         const result = await bookingsAPI.createBooking(booking);
         setBooking({
             name: '',
+            phone: '',
             date: '',
             description: '',
         });
@@ -25,14 +39,30 @@ export default function ContactPage() {
     return (
         <div className="container mt-5">
             <h1>Bookings</h1>
-            {submit && <p>Booking received</p>}
+            {submit && <p  className='success-msg'>Your booking was receieved. Vinny will reach out to you as soon as possible to discuss the details!</p>}
+            {errorMsg && <div className="alert alert-danger">{errorMsg}</div>}
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label className="form-label">Name:</label>
                     <input 
                         type="text" 
                         value={booking.name}
-                        onChange={(e) => setBooking({ ...booking, name: e.target.value })}
+                        onChange={(e) => {
+                            setBooking({ ...booking, name: e.target.value });
+                            setErrorMsg(null);
+                        }}
+                        className="form-control"
+                    />
+                </div>
+                <div className="mb-3">
+                    <label className="form-label">Phone:</label>
+                    <input 
+                        type="number" 
+                        value={booking.phone}
+                        onChange={(e) => {
+                            setBooking({ ...booking, phone: e.target.value });
+                            setErrorMsg(null);
+                        }}                        
                         className="form-control"
                     />
                 </div>
@@ -41,16 +71,22 @@ export default function ContactPage() {
                     <input 
                         type="datetime-local"
                         value={booking.date}
-                        onChange={(e) => setBooking({ ...booking, date: e.target.value })}
-                        className="form-control"
+                        onChange={(e) => {
+                            setBooking({ ...booking, date: e.target.value });
+                            setErrorMsg(null);
+                        }}                       
+                         className="form-control"
                     />
                 </div>
                 <div className="mb-3">
                     <label className="form-label">Description:</label>
                     <textarea 
                         value={booking.description}
-                        onChange={(e) => setBooking({ ...booking, description: e.target.value })}
-                        className="form-control"
+                        onChange={(e) => {
+                            setBooking({ ...booking, description: e.target.value });
+                            setErrorMsg(null);
+                        }}                       
+                         className="form-control"
                     />
                 </div>
                 <div className='container mt-5'>
