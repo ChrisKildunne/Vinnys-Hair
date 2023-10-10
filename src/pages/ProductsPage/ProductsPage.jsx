@@ -6,41 +6,41 @@ import ProductList from "../../components/ProductList/ProductList";
 
 
 export default function ProductsPage({ user, setUser }) {
-  const [productItems, setProductItems] = useState([]);
-  const [cart, setCart] = useState(null);
-  const [addedToCart, setAddedToCart ] = useState("")
-  const navigate = useNavigate();
+  // const [productItems, setProductItems] = useState([]);
+  // const [cart, setCart] = useState(null);
+  // const [addedToCart, setAddedToCart ] = useState("")
+  // const navigate = useNavigate();
 
-  useEffect(function () {
-    async function getProducts() {
-      const products = await productsAPI.getAll();
-      setProductItems(products);
-    }
-    getProducts();
-    if (user) {
-      async function getCart() {
-        const cart = await ordersAPI.getCart();
-        setCart(cart);
-      }
-      getCart();
-    }
-  }, [user]);
+//   useEffect(function () {
+//     async function getProducts() {
+//       const products = await productsAPI.getAll();
+//       setProductItems(products);
+//     }
+//     getProducts();
+//     if (user) {
+//       async function getCart() {
+//         const cart = await ordersAPI.getCart();
+//         setCart(cart);
+//       }
+//       getCart();
+//     }
+//   }, [user]);
 
-  /*---- Event Handlers ----*/
-  async function handleAddToCart(productId) {
-    const updatedCart = await ordersAPI.addProductToCart(productId);
-    setCart(updatedCart);
-    setAddedToCart("Added +1 to Cart")
-    setTimeout(()=>{
-      setAddedToCart("");
-    }, 2000);
-  }
+//   /*---- Event Handlers ----*/
+//   async function handleAddToCart(productId) {
+//     const updatedCart = await ordersAPI.addProductToCart(productId);
+//     setCart(updatedCart);
+//     setAddedToCart("Added +1 to Cart")
+//     setTimeout(()=>{
+//       setAddedToCart("");
+//     }, 2000);
+//   }
   
-  return (
-    <>
-      <h1>Merch</h1>
-      {addedToCart }
-      <ProductList productItems={productItems} handleAddToCart={handleAddToCart} user={user} />
-    </>
-  );
+//   return (
+//     <>
+//       <h1>Merch</h1>
+//       {addedToCart }
+//       <ProductList productItems={productItems} handleAddToCart={handleAddToCart} user={user} />
+//     </>
+//   );
 }

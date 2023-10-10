@@ -25,7 +25,7 @@ export default function App() {
 
   useEffect(() => {
     navigate('/'); 
-  }, []);
+  }, [navigate]);
 
   return (
     <main className="App">
