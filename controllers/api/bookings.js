@@ -2,7 +2,7 @@ const Booking = require('../../models/booking');
 const nodemailer = require('nodemailer');
 const twilio = require('twilio')
 
-const twilioClient =  twilio('AC0bb68bf481d65888002ad39f5259e210','3bc8640cc2c9b0de5583e3dd96c54ee8')
+const twilioClient = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 async function index(req, res) {
     const bookings = await Booking.find({}).sort('name').exec();
