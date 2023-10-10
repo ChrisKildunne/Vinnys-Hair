@@ -3,13 +3,13 @@ body, html {
   margin: 0;
   padding: 0;
 }
+
 body {
   background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('https://i.imgur.com/r1sR32S.png') repeat-y center top fixed;
+  background-size: 100% auto; /* This line ensures the background spans the entire width */
   margin: 0;
   padding: 0;
 }
-
-
 
 .App {
   text-align: center;
@@ -17,9 +17,10 @@ body {
   min-height: 100vh;
   background-color: transparent; 
 }
+
 @media (max-width: 768px) {
   .App {
-    padding: 10px; /* Add padding if content is too close to the screen's edge on mobile */
-    font-size: 14px; /* Optionally adjust font sizes or other styles for mobile */
+    padding: 10px; 
+    font-size: 14px; 
   }
 }
