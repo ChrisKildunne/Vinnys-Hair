@@ -1,29 +1,40 @@
-import React from 'react';
-import ReactImageZoom from 'react-image-zoom';
-
+import React, { useState } from 'react';
 import './MyWork.css';
 
 export default function MyWork() {
-  const images = [
-    { img: 'https://i.imgur.com/PmOPgxS.jpg', alt: 'Image 1' },
-    {img:"https://i.imgur.com/cN7czQn.jpg", alt: 'Image 2'},
-    {img:"https://i.imgur.com/fxgCzGz.png" , alt: 'Image 3'},
-    {img:"https://i.imgur.com/bNDGlKb.jpg", alt: 'Image 4'},
-    {img:"https://i.imgur.com/OzbFXbQ.jpg" , alt: 'Image 5'},
 
+  const images = [
+    'https://i.imgur.com/PmOPgxS.jpg',
+    'https://i.imgur.com/pF9Y42j.jpg',
+    'https://i.imgur.com/ksVMFrU.jpg',
+     "https://i.imgur.com/PmOPgxS.jpg",
+     "https://i.imgur.com/pF9Y42j.jpg",
+     "https://i.imgur.com/ksVMFrU.jpg",
+     "https://i.imgur.com/PPiNaAL.jpg",
+     "https://i.imgur.com/cN7czQn.jpg",
+     "https://i.imgur.com/bNDGlKb.jpg",
+     "https://i.imgur.com/S8P8XFL.jpg",
+     "https://i.imgur.com/OzbFXbQ.jpg",
+     "https://i.imgur.com/IyAmmLM.jpg",
+     "https://i.imgur.com/fxgCzGz.png",
+     "https://i.imgur.com/5wc6tmc.png" 
   ];
+
+
   return (
     <div className="container">
-      <div className="row">
-        {images.map((image, index) => (
-          <div className="col-md-4" key={index}>
-            <ReactImageZoom {...image} zoomImage={image.img} />
-          </div>
-        ))}
-      </div>
+    <div className="image-grid">
+      {images.map((image, index) => (
+        <div key={index}>
+          <img
+            src={image}
+            alt={`Image ${index}`}
+            className="img-thumbnail"
+            
+          />
+        </div>
+      ))}
+    </div>
     </div>
   );
 }
-
-
-
