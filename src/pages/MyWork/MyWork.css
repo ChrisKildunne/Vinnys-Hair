@@ -20,3 +20,13 @@
     gap: 10px;
   }
   
+  @media (max-width: 768px) {
+    .container img {
+      width: 100%; /* Use full width for phone screens */
+      height: auto; /* Allow the aspect ratio to be maintained */
+    }
+  
+    .image-grid {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Adjust columns for phone screens */
+    }
+  }
