@@ -4,4 +4,5 @@
     object-fit: cover; 
     padding: 70px;
     padding-top: 50px;
+    cursor: zoom-in;
 }
