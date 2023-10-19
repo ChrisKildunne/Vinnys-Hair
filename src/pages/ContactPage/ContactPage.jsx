@@ -29,7 +29,6 @@ export default function ContactPage() {
         setBooking({
             name: '',
             phone: '',
-            date: '',
             description: '',
         });
         setSubmit(true);
@@ -68,7 +67,7 @@ export default function ContactPage() {
                         disabled={submit}
                     />
                 </div>
-                <div className="mb-3">
+                {/* <div className="mb-3">
                     <label className="form-label">Date:</label>
                     <input 
                         type="datetime-local"
@@ -80,9 +79,9 @@ export default function ContactPage() {
                          className="form-control"
                          disabled={submit}
                     />
-                </div>
+                </div> */}
                 <div className="mb-3">
-                    <label className="form-label">Description:</label>
+                    <label className="form-label">Inquiry:</label>
                     <textarea 
                         value={booking.description}
                         onChange={(e) => {

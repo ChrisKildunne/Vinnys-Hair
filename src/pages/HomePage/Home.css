@@ -8,6 +8,14 @@
         margin-top: 30px;
     }
 }
+body.HomePage {
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('https://i.imgur.com/RktezNS.jpg') no-repeat center top fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0; 
+  overflow: hidden; 
+}
+
 
 h1 {
     font-family: 'Pacifico', cursive; /* Here I used 'Pacifico' as an example, but you can use any cursive font */
@@ -15,7 +23,7 @@ h1 {
     color: black;
     overflow: hidden;
     white-space: nowrap; /* This will keep the text in a single line while animating */
-    animation: paint 3s forwards;
+    /* animation: paint 3s forwards; */
 }
 
 img {
@@ -26,11 +34,17 @@ img {
     filter: hue-rotate(210deg);
 }
 
-img:hover {
+.nav-item:hover {
     transform: scale(1.05);
     box-shadow: 7px 7px 20px rgba(255, 255, 255, 0.5);
 }
 
+.instagram-icon {
+  color: black; /* Set the color to black */
+}
+.nav-item {
+  padding: 30px; /* Adjust the margin as needed */
+}
 
 @media (max-width: 768px) {
     img {
@@ -43,7 +57,3 @@ img:hover {
     }
   }
   
-  
-
-
-

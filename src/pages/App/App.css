@@ -4,12 +4,7 @@ body, html {
   padding: 0;
 }
 
-body {
-  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('https://i.imgur.com/r1sR32S.png') repeat-y center top fixed;
-  background-size: 100% auto; /* This line ensures the background spans the entire width */
-  margin: 0;
-  padding: 0;
-}
+
 
 .App {
   text-align: center;

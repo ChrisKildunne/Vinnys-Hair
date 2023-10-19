@@ -8,6 +8,7 @@ import CheckoutForm from '../../components/CheckoutForm/CheckoutForm';
 import HomePage from '../HomePage/HomePage';  
 import ContactPage from '../ContactPage/ContactPage';  
 import MyWork from '../MyWork/MyWork';  
+import About from '../About/About';  
 import { getUser } from '../../utilities/users-service';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
@@ -32,6 +33,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />  
         <Route path="/mywork" element={<MyWork/>} />  
+        <Route path="/about" element={<About/>} />  
         <Route path="/orders/new" element={<ProductsPage user={user} />} />
         <Route path="/contact" element={<ContactPage />} />  
         <Route path="/product/:productId" element={<ProductDetailsPage user={user} />} />
