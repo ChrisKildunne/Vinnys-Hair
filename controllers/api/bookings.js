@@ -16,18 +16,18 @@ async function create(req, res) {
         from: 'chriskildunnese@gmail.com',
         to: 'chriskildunne@gmail.com',
         subject: 'New Booking Recieved',
-        text: `Name: ${booking.name}, Client Phone: ${booking.phone} Date: ${booking.date}, Description: ${booking.description}`
+        text: `Name: ${booking.name}, Client Email: ${booking.email}, Inquiry: ${booking.description}`
     };
-    try{
-        await twilioClient.messages.create({
-            body: 'Thank you for your booking! We will contact you shortly.',
-            to: `+1${booking.phone}`,  
-            from: '+18552741067'
-        });
-    }catch(error){
-        console.error('Error sending SMS:', error);
-        res.status(500).json({ error: 'Failed to send SMS' });
-    }
+    // try{
+    //     await twilioClient.messages.create({
+    //         body: 'Thank you for your booking! We will contact you shortly.',
+    //         to: `+1${booking.phone}`,  
+    //         from: '+18552741067'
+    //     });
+    // }catch(error){
+    //     console.error('Error sending SMS:', error);
+    //     res.status(500).json({ error: 'Failed to send SMS' });
+    // }
 
 
     try {

@@ -6,12 +6,8 @@ const bookingSchema = new Schema({
         type: String,
         required: true
     },
-    phone:{
-        type: Number,
-        required: true
-    },
-    date: {
-        type: Date,
+    email:{
+        type: String,
         required: true
     },
     description: {

@@ -1,11 +1,8 @@
-/* In your CSS file */
-.About img {
-    max-width: 200px; /* Set the maximum width */
-    height: auto; /* Maintain the aspect ratio */
-    transition: transform 0.3s; /* Add a smooth transition on hover */
-  }
-  
-  .About img:hover {
-    transform: scale(1); /* Prevent it from scaling up on hover */
-  }
-  
+.about-content{
+  font-family: 'Titan One', sans-serif !important;
+  font-size: 36px;
+  margin: 4%;
+
+
+
+}

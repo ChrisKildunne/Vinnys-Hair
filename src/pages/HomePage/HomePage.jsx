@@ -15,10 +15,13 @@ export default function HomePage() {
         // }, []);
     return(
         <div className="HomePage">
-    <h1 className='header'>
-        <img src="https://i.imgur.com/7kKq6Gy.png" alt="" />
-        
-    </h1>
+            <div className='bending-text-container'>
+                <h1 className='header'>
+                    {/* <img src="https://i.imgur.com/7kKq6Gy.png" alt="" /> */}
+                    Your hair suks
+                </h1>
+                </div>
+            <div className='content-container'>
         <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
                         <Link className="cutout-text" to="/about"><img
@@ -40,15 +43,16 @@ export default function HomePage() {
         style={{ width: '200px', height: '100px' }}
       /></Link>
                     </li>
-                </ul>
-                <ul className="navbar-nav">
                     <li className="nav-item">
                     <a href="https://www.instagram.com/yourhairsuks/" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faInstagram} size="8x" className="instagram-icon" />
                         </a>
                     </li>
-             </ul>
+                </ul>
+                {/* <ul className="navbar-nav"> */}
+             {/* </ul> */}
              <img src="https://i.imgur.com/RktezNS.jpg"/>
+             </div>
         </div>
     )
 }

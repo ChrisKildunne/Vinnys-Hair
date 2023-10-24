@@ -5,15 +5,14 @@ import './ContactPage.css'
 export default function ContactPage() {
     const [booking, setBooking] = useState({
         name: '',
-        phone: '',
-        date: '',
+        email: '',
         description: ''
     });
     const [submit, setSubmit] = useState(false);
     const [errorMsg, setErrorMsg] = useState(null)
 
     const isValidForm = () => {
-        if(!booking.name || !booking.phone || !booking.date || !booking.description){
+        if(!booking.name || !booking.email || !booking.description){
             return false;
         }
         return true;
@@ -28,7 +27,7 @@ export default function ContactPage() {
         const result = await bookingsAPI.createBooking(booking);
         setBooking({
             name: '',
-            phone: '',
+            email: '',
             description: '',
         });
         setSubmit(true);
@@ -36,13 +35,12 @@ export default function ContactPage() {
 
     return (
         <div className="container mt-5">
-            <h1>Bookings</h1>
-            {!submit && <p  className='success-msg'>Please enter your name, desired date of appointment, phone number and a short description of what you'd like.</p>}
-            {submit && <p  className='success-msg'>Your booking was receieved. You will recieve a confirmation text shortly and Vinny will reach out to you as soon as possible to discuss the details!</p>}
+            {!submit && <p  className='success-msg custom'>Please enter your name, email and inquiry.</p>}
+            {submit && <p  className='success-msg custom'>Your booking was receieved. You will recieve a confirmation text shortly and Vinny will reach out to you as soon as possible to discuss the details!</p>}
             {errorMsg && <div className="alert alert-danger">{errorMsg}</div>}
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                    <label className="form-label">Name:</label>
+                    <label className="form-label custom">Name:</label>
                     <input 
                         type="text" 
                         value={booking.name}
@@ -55,12 +53,12 @@ export default function ContactPage() {
                     />
                 </div>
                 <div className="mb-3">
-                    <label className="form-label">Phone:</label>
+                    <label className="form-label custom">Email:</label>
                     <input 
-                        type="number" 
-                        value={booking.phone}
+                        type="string" 
+                        value={booking.email}
                         onChange={(e) => {
-                            setBooking({ ...booking, phone: e.target.value });
+                            setBooking({ ...booking, email: e.target.value });
                             setErrorMsg(null);
                         }}                        
                         className="form-control"
@@ -81,7 +79,7 @@ export default function ContactPage() {
                     />
                 </div> */}
                 <div className="mb-3">
-                    <label className="form-label">Inquiry:</label>
+                    <label className="form-label custom">Inquiry:</label>
                     <textarea 
                         value={booking.description}
                         onChange={(e) => {
