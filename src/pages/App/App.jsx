@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate, Switch } from 'react-router-dom';
 import ProductsPage from '../ProductsPage/ProductsPage';
 import ProductDetailsPage from '../ProductDetailsPage/ProductDetailsPage';
 import CartPage from '../CartPage/CartPage';
@@ -28,14 +28,23 @@ export default function App() {
 
   return (
     <main className="App">
-      <NavBar user={user} setUser={setUser} />
 
       <Routes>
+
         <Route path="/" element={<HomePage />} />  
-        <Route path="/mywork" element={<MyWork/>} />  
-        <Route path="/about" element={<About/>} />  
+        <Route path="/mywork" element={ <>
+              <NavBar user={user} setUser={setUser} />
+              <MyWork />
+            </>} />  
+        <Route path="/about" element={<>
+              <NavBar user={user} setUser={setUser} />
+              <About />
+            </>} />  
         <Route path="/orders/new" element={<ProductsPage user={user} />} />
-        <Route path="/contact" element={<ContactPage />} />  
+        <Route path="/contact" element={<>
+              <NavBar user={user} setUser={setUser} />
+              <ContactPage />
+            </>} />  
         <Route path="/product/:productId" element={<ProductDetailsPage user={user} />} />
         <Route path="/orders/cart" element={<CartPage user={user} />} />
         <Route path="/orders/checkout" element={<Elements stripe={stripePromise}><CheckoutForm user={user} /></Elements>} />
