@@ -35,6 +35,6 @@
   }
 
   .image-grid {
-    grid-template-columns: repeat(5, 1fr); /* Adjust columns for phone screens */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust columns for phone screens */
   }
 }

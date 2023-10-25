@@ -3,7 +3,6 @@ import './MyWork.css';
 
 export default function MyWork() {
   const imagesAndVideo = [
-        
     "https://i.imgur.com/hUWotX0.mp4",
     'https://i.imgur.com/PmOPgxS.jpg',
     'https://i.imgur.com/mIUudjX.mp4',  
