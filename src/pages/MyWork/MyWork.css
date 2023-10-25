@@ -1,37 +1,40 @@
 .container {
-    overflow: visible;
+  overflow: visible;
+}
+
+.container img,
+.container video {
+  width: 350px;
+  height: 350px;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.container img:hover,
+.container video:hover {
+  transform: scale(1.5);
+  z-index: 1;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .container img,
+  .container video {
+    width: 100px;
+    height: 100px;
   }
-  
-  .container img {
-    width: 350px;
-    height: 350px;
-    transition: transform 0.3s;
-    position: relative; /* Create a new stacking context */
+
+  .container img:hover,
+  .container video:hover {
+    transform: scale(3);
   }
-  
-  .container img:hover {
-    transform: scale(1.5);
-    z-index: 1;
-  }
-  
+
   .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(5, 1fr); /* Adjust columns for phone screens */
   }
-  
-  @media (max-width: 768px) {
-    .container img {
-        width: 100px;
-        height: 100px;
-      
-    }
-    .container img:hover {
-        transform: scale(5);
-       
-      }
-      
-    .image-grid {
-      grid-template-columns: repeat(5, 1fr); /* Adjust columns for phone screens */
-    }
-  }
+}

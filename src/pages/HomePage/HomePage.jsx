@@ -24,7 +24,8 @@ export default function HomePage() {
             <div className='content-container'>
         <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
-                        <Link className="cutout-text" to="/about"><img
+                        <Link className="cutout-text" to="/about">
+                            <img
         src="https://i.imgur.com/cMuE2gu.png"
         alt="ransom-note-fonts"
         border="0"
