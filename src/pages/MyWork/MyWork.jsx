@@ -3,13 +3,15 @@ import './MyWork.css';
 
 export default function MyWork() {
   const imagesAndVideo = [
-    'https://i.imgur.com/mIUudjX.mp4',  
+    'https://i.imgur.com/nozSlRC.mp4',
     "https://i.imgur.com/hUWotX0.mp4",
     'https://i.imgur.com/PmOPgxS.jpg',
-    "https://i.imgur.com/545ITfA.mp4",
+    'https://i.imgur.com/mIUudjX.mp4',  
     'https://i.imgur.com/pF9Y42j.jpg',
+    'https://i.imgur.com/WgvLXL4.mp4',
     'https://i.imgur.com/PPiNaAL.jpg',
     'https://i.imgur.com/S8P8XFL.jpg',
+  
     'https://i.imgur.com/fxgCzGz.png',
     'https://i.imgur.com/5wc6tmc.png',
     'https://i.imgur.com/3YO89dU.jpg',
