@@ -3,7 +3,7 @@ import './MyWork.css';
 
 export default function MyWork() {
   const imagesAndVideo = [
-    'https://i.imgur.com/nozSlRC.mp4',
+        
     "https://i.imgur.com/hUWotX0.mp4",
     'https://i.imgur.com/PmOPgxS.jpg',
     'https://i.imgur.com/mIUudjX.mp4',  
@@ -11,11 +11,11 @@ export default function MyWork() {
     'https://i.imgur.com/WgvLXL4.mp4',
     'https://i.imgur.com/PPiNaAL.jpg',
     'https://i.imgur.com/S8P8XFL.jpg',
-  
     'https://i.imgur.com/fxgCzGz.png',
     'https://i.imgur.com/5wc6tmc.png',
     'https://i.imgur.com/3YO89dU.jpg',
     'https://i.imgur.com/L2kvOIf.jpg',
+    'https://i.imgur.com/09mPHvC.jpg',
     'https://i.imgur.com/UTHJq2k.jpg',
     'https://i.imgur.com/goYaTh9.jpg',
     'https://i.imgur.com/EH0lxu9.jpg',
