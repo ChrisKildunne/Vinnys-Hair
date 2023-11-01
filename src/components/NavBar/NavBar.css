@@ -1,27 +1,14 @@
-/* For small screens, such as phones */
+/* Hide text links by default */
+.nav-text {
+  display: none;
+}
+
+/* On small screens, hide images and show text */
 @media (max-width: 768px) {
-  /* Hide the text in the navigation links */
-  .navbar-nav .nav-link {
+  .nav-image {
     display: none;
   }
-
-  /* Adjust the width and height of the logo and icons */
-  .navbar img,
-  .navbar .fa-instagram {
-    width: 50px;
-    height: 50px;
-  }
-
-  /* Display the toggler icon and the collapsible links */
-  .navbar-toggler {
-    display: block;
-  }
-
-  .navbar-collapse {
-    display: none;
-  }
-
-  .navbar-toggler.show + .navbar-collapse {
+  .nav-text {
     display: block;
   }
 }
