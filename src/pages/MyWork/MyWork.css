@@ -12,7 +12,8 @@
 }
 
 .container img:hover,
-.container video:hover {
+.container video:hover,
+.youtube-video-wrapper:hover {
   transform: scale(1.5);
   z-index: 1;
 }
@@ -27,19 +28,20 @@
   .container img,
   .container video,
   .youtube-video-wrapper {
-    max-width: 90%; /* Reduce width to give a bit of margin */
-    margin: 0 auto; /* Center the elements and provide space on both sides */
+    width: 100%; 
+    height: auto;
+    margin: 0 auto;
   }
 
   .container:hover img,
   .container:hover video,
   .youtube-video-wrapper:hover {
-    transform: scale(1.5); /* Reduced scale factor even more to prevent overlap */
+    transform: scale(1.1); /* Reduced scale factor to prevent overlap on mobile */
   }
 
   .image-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 15px; /* Increase gap between grid items for better spacing */
+    grid-template-columns: 1fr; /* Make it single column on mobile */
+    gap: 20px; /* Increase gap for better spacing */
   }
 }
 
@@ -47,7 +49,7 @@
   width: 350px;
   height: 350px;
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio padding */
   overflow: hidden;
   transition: transform 0.3s;
 }
@@ -58,9 +60,4 @@
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.youtube-video-wrapper:hover {
-  transform: scale(1.5);
-  z-index: 1;
 }
