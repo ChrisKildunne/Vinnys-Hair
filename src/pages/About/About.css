@@ -1,8 +1,10 @@
 .about-content{
-  font-family: 'Titan One', sans-serif !important;
+  font-family: 'Creepster', cursive !important;
   font-size: 36px;
   margin: 4%;
+  }
+  .about-header{
+    font-family: 'Creepster', cursive !important;
 
-
-
-}
+  }
+  

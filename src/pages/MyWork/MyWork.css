@@ -3,7 +3,8 @@
 }
 
 .container img,
-.container video {
+.container video,
+.youtube-video-wrapper {
   width: 350px;
   height: 350px;
   transition: transform 0.3s;
@@ -24,17 +25,42 @@
 
 @media (max-width: 768px) {
   .container img,
-  .container video {
-    width: 100px;
-    height: 100px;
+  .container video,
+  .youtube-video-wrapper {
+    max-width: 90%; /* Reduce width to give a bit of margin */
+    margin: 0 auto; /* Center the elements and provide space on both sides */
   }
 
-  .container img:hover,
-  .container video:hover {
-    transform: scale(3);
+  .container:hover img,
+  .container:hover video,
+  .youtube-video-wrapper:hover {
+    transform: scale(1.5); /* Reduced scale factor even more to prevent overlap */
   }
 
   .image-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust columns for phone screens */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px; /* Increase gap between grid items for better spacing */
   }
+}
+
+.youtube-video-wrapper {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.youtube-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.youtube-video-wrapper:hover {
+  transform: scale(1.5);
+  z-index: 1;
 }

@@ -31,10 +31,9 @@ export default function App() {
 
       <Routes>
 
-        <Route path="/" element={<HomePage />} />  
-        <Route path="/mywork" element={ <>
+        <Route path="/" element={ <>
               <NavBar user={user} setUser={setUser} />
-              <MyWork />
+              <HomePage/>
             </>} />  
         <Route path="/about" element={<>
               <NavBar user={user} setUser={setUser} />

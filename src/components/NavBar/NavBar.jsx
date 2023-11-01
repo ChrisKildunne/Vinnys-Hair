@@ -6,23 +6,26 @@ import './NavBar.css';
 
 export default function NavBar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const handleLinkClick = () => {
+    setNavbarOpen(false)
+  }
 
   return (
-    <nav className="navbar navbar-expand-lg">
-      <button className="navbar-toggler" type="button" onClick={() => setNavbarOpen(!navbarOpen)}>
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className='collapse navbar-collapse' id="navbarNav">
+      <nav className="navbar navbar-expand-lg">
+        <button className="navbar-toggler" type="button" onClick={() => setNavbarOpen(!navbarOpen)}>
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className={`collapse navbar-collapse ${navbarOpen ? 'show' : ''}`} id="navbarNav">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item custom">
-            <Link className="nav-link" to="/"><img src="https://i.imgur.com/lLFMaHX.png" alt="ransom-note-fonts" border="0"  style={{ width: '350px', height: '80px' , margin: '0px'}}></img></Link>
+            <Link className="nav-link" to="/" onClick = {handleLinkClick}><img src="https://i.imgur.com/lLFMaHX.png" alt="ransom-note-fonts" border="0"  style={{ width: '350px', height: '80px' , margin: '0px'}}></img></Link>
           </li>
-          <li className="nav-item custom">
+          {/* <li className="nav-item custom">
             <Link className="nav-link" to="/mywork"><img src="https://i.imgur.com/tKFzVAe.png" alt="ransom-note-fonts" border="0"  style={{ width: '400px', height: '80px' }}></img>
      </Link>
-          </li>
+          </li> */}
           <li className="nav-item cutsom">
-            <Link className="nav-link custom" to="/about"><img
+            <Link className="nav-link custom" to="/about"  onClick = {handleLinkClick}><img
         src="https://i.imgur.com/cMuE2gu.png"
         alt="ransom-note-fonts"
         border="0"
@@ -30,7 +33,7 @@ export default function NavBar() {
       /></Link>
           </li>
           <li className="nav-item custom">
-            <Link className="nav-link" to="/contact"><img
+            <Link className="nav-link" to="/contact"  onClick = {handleLinkClick}><img
         src="https://i.imgur.com/ZTZGQbE.png"
         alt="ransom-note-fonts"
         border="0"
