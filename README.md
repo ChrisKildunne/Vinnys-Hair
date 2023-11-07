@@ -19,10 +19,6 @@ Welcome to Vinnys-Hair, the premier destination for the latest in hairstyling an
 - **MongoDB**: For storing and retrieving user data, appointment details, and product information.
 - **Bootstrap**: To create a visually appealing and responsive design.
 
-## Using Stripe
-
-- Instructions on installing and configuring Stripe for payment processing.
-- Reminder that Stripe is in test-mode with instructions on using test card details for transactions.
 
 ## Getting Started
 
