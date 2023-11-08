@@ -4,30 +4,31 @@ Developed by Chris Kildunne
 
 ## Description
 
-Welcome to Vinnys-Hair, the premier destination for the latest in hairstyling and hair care in New York. Discover our extensive range of hair styling services, products, and expert advice to keep you looking your best!
+Welcome to Vinnys-Hair, the ultimate destination for hairstyling and hair care in New York. Our platform offers an extensive range of hair styling services,  and expert advice to keep you looking your best. Explore Vinny's incredible portfolio and easily book appointments for his top-notch services.
 
 ## Key Features
 
-- Clients can book appointments online for various hair styling services.
-
-
+- **Online Appointment Booking**: Clients can seamlessly book appointments for various hairstyling services through our user-friendly online platform.
+- **Portfolio Showcase**: Browse through Vinny's extensive work portfolio to see the latest trends and styles.
+- **Expert Advice**: Get tips and recommendations from Vinny and other hair care experts.
 
 ## Technologies Used
 
 - **React**: For a dynamic and responsive client-side experience.
-- **Node.js** and **Express.js**: To build a robust server-side application.
-- **MongoDB**: For storing and retrieving user data, appointment details, and product information.
-- **Bootstrap**: To create a visually appealing and responsive design.
-
-
-## Getting Started
-
-To get started with Vinnys-Hair, you can follow these steps:
+- **Node.js** and **Express.js**: Building a robust server-side application.
+- **MongoDB**: Storing and managing user data, appointment details, and product information.
+- **Bootstrap**: Crafting a visually appealing and responsive design.
 
 
 ## Next Steps
 
-- Enable administrative functionalities to manage appointments and products.
-- Optimize the design for mobile users, ensuring a seamless experience on all devices.
+- **Merchandise Sales**: Enable users to purchase exclusive Vinny’s Hair merchandise directly from the website.
+- **Instructional Videos**: Offer premium instructional videos on hairstyling techniques and tips, enhancing the learning experience for users.
+  
+## Live Application
+
+Explore Vinnys-Hair now: [Vinny's Hair](https://your-hair-suks-50fdd50ef999.herokuapp.com/)
+
+Dive into a world where style meets convenience. Book your next appointment with Vinny today!
 
 
