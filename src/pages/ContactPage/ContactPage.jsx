@@ -71,7 +71,7 @@ export default function ContactPage() {
           />
         </div>
         <div className='container mt-5'>
-          <button type="submit" className="btn custom-btn">Submit Booking</button>
+          <button type="submit" className="btn custom-btn">Submit</button>
         </div>
       </form>
     </div>

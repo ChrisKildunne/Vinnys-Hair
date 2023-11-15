@@ -1,10 +1,11 @@
-.about-content{
-  font-family: 'Creepster', cursive !important;
-  font-size: 36px;
-  margin: 4%;
-  }
-  .about-header{
-    font-family: 'Creepster', cursive !important;
+.About {
+  text-align: center; 
+}
 
-  }
-  
+.About img {
+  display: block;
+  width: 100%; 
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-bottom: 10px; 
+}

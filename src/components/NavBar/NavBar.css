@@ -3,6 +3,19 @@
   display: none;
 }
 
+.top-image-container {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px; /* Add space to the left of the image */
+  margin-right: 20px; /* Add space to the right of the image */
+}
+
+.top-image-container img {
+  max-width: 120px;
+  height: auto;
+}
+
+
 /* On small screens, hide images and show text */
 @media (max-width: 768px) {
   .nav-image {

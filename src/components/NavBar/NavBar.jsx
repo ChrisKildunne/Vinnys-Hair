@@ -16,6 +16,7 @@ export default function NavBar() {
   }
 
   return (
+    <>
     <nav className="navbar navbar-expand-lg">
       <button className="navbar-toggler" type="button" onClick={handleToggleClick} aria-controls="navbarNav" aria-expanded={navbarOpen}>
         <span className="navbar-toggler-icon"></span>
@@ -48,7 +49,13 @@ export default function NavBar() {
             </a>
           </li>
         </ul>
+        
+      </div>
+      <div className="top-image-container">
+        <img src="https://i.imgur.com/lMakB0i.png" alt="Top Image" />
       </div>
     </nav>
+ 
+    </>
   );
 }
